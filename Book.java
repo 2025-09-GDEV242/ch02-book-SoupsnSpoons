@@ -58,12 +58,12 @@ class Book
     {
         System.out.println(title);
     }
-    public void printDetails() //completing exercise 2.87
+    public void printDetails() //completing exercise 2.87...2.89
     {
         System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference number: " + refNumber);
     }
-    public void setRefNumber(String ref)
+    public void setRefNumber(String ref)//in accordance with exercise 2.88
     {
-        //come back to this... I have no idea what's supposed to go here
+        refNumber = ref;//come back to this... I have no idea what's supposed to go here
     }
 }
