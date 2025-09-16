@@ -11,23 +11,25 @@ class Book
     // The fields.
     private String author;
     private String title;
+    private String refNumber;
     private int pages;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    //Adding in int bookPages in accordance with exercise 2.85
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    //Adding in int bookPages in accordance with exercise 2.85 and String refNumber in accordance with exercise 2.88
+    public Book(String bookAuthor, String bookTitle, String refNumber, int bookPages)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
+        refNumber = "";
     }
 
     // Add the methods here ...
     /**
-     * Adding the two accessor methods (completing exercise 2.83...2.85)
+     * Adding the accessor methods (completing exercise 2.83...2.85...2.88)
      */
     public String getAuthor()
     {
@@ -41,8 +43,12 @@ class Book
     {
         return pages;
     }
+    public String refNumber()
+    {
+        return refNumber;
+    }
     /**
-     * Adding printAuthor and printTitle (completing exercise 2.84)
+     * Adding printAuthor and printTitle (completing exercise 2.84...2.87...2.88)
      */
     public void printAuthor()
     {
@@ -55,5 +61,9 @@ class Book
     public void printDetails() //completing exercise 2.87
     {
         System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
+    }
+    public void setRefNumber(String ref)
+    {
+        //come back to this... I have no idea what's supposed to go here
     }
 }
