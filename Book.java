@@ -24,7 +24,7 @@ class Book
 
     // Add the methods here ...
     /**
-     * Adding the two accessor methods
+     * Adding the two accessor methods (completing exercise 2.83)
      */
     public String getAuthor()
     {
@@ -34,5 +34,15 @@ class Book
     {
         return title;
     }
-    
+    /**
+     * Adding printAuthor and printTitle (completing exercise 2.84)
+     */
+    public void printAuthor()
+    {
+        System.out.println(author);
+    }
+    public void printTitle()
+    {
+        System.out.println(title);
+    }
 }
