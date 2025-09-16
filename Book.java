@@ -52,4 +52,8 @@ class Book
     {
         System.out.println(title);
     }
+    public void printDetails() //completing exercise 2.87
+    {
+        System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
+    }
 }
