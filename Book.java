@@ -11,20 +11,23 @@ class Book
     // The fields.
     private String author;
     private String title;
+    private int pages;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle)
+    //Adding in int bookPages in accordance with exercise 2.85
+    public Book(String bookAuthor, String bookTitle, int bookPages)
     {
         author = bookAuthor;
         title = bookTitle;
+        pages = bookPages;
     }
 
     // Add the methods here ...
     /**
-     * Adding the two accessor methods (completing exercise 2.83)
+     * Adding the two accessor methods (completing exercise 2.83...2.85)
      */
     public String getAuthor()
     {
@@ -33,6 +36,10 @@ class Book
     public String getTitle()
     {
         return title;
+    }
+    public int getPages()
+    {
+        return pages;
     }
     /**
      * Adding printAuthor and printTitle (completing exercise 2.84)
