@@ -58,12 +58,25 @@ class Book
     {
         System.out.println(title);
     }
+    public void setRefNumber(String ref)//in accordance with exercise 2.88
+    {//come back to this... exercise 2.89
+        refNumber = ref;
+    }
+    /**
+     * SO here's the tea, right? The code is working, but here's the problem:
+     * when the code runs, regardless of what is put into the refNumber slot, it will print "Reference Number: null"
+     * the if/else statement ONLY seems to come into play once you go to actually set the value for the reference number.
+     * if you go to set the value and leave it as a zero length string, it will print "ZZZ" as intended, or if you put in an actual value, it will print said value.
+     * I do not know if this is correct or not...
+     */
     public void printDetails() //completing exercise 2.87...2.89
     {
-        System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference number: " + refNumber);
+        if (refNumber == ""){
+            System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference number: ZZZ ");
+        }
+        else{
+            System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference number: " + refNumber);
+        }
     }
-    public void setRefNumber(String ref)//in accordance with exercise 2.88
-    {
-        refNumber = ref;//come back to this... I have no idea what's supposed to go here
-    }
+    
 }
