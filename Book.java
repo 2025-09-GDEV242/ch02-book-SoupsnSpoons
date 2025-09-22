@@ -19,7 +19,7 @@ class Book
      * is constructed.
      */
     //Adding in int bookPages in accordance with exercise 2.85 and String refNumber in accordance with exercise 2.88
-    public Book(String bookAuthor, String bookTitle, String refNumber, int bookPages)
+    public Book(String bookAuthor, String bookTitle, int bookPages)
     {
         author = bookAuthor;
         title = bookTitle;
@@ -64,11 +64,11 @@ class Book
     public void setRefNumber(String ref)//in accordance with exercise 2.88
     {//come back to this... exercise 2.89
         refNumber = ref;
-        if (refNumber == ""){
-            
+        if (ref.length()>=3){
+            refNumber = ref;
         }
         else{
-            refNumber = "error";
+            refNumber = "The ref number is too short. Please input a value that is at least 3 characters long.";
         }
     }
     /**
@@ -76,16 +76,20 @@ class Book
      * when the code runs, regardless of what is put into the refNumber slot, it will print "Reference Number: null"
      * the if/else statement ONLY seems to come into play once you go to actually set the value for the reference number.
      * if you go to set the value and leave it as a zero length string, it will print "ZZZ" as intended, or if you put in an actual value, it will print said value.
-     * I do not know if this is correct or not..
+     * I do not know if this is correct or not...
+     * 
+     * EDIT: so we went back and removed the refNumber from the parameters in the contructor, and added a length statement to the setter, and the issue is still there.
+     * Let's try moving the conditional statement into the printDetails() section and see what happens... fingers crossed...
      */
     public void printDetails() //completing exercise 2.87...2.89
     {
-        if (refNumber == ""){
+       System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference number: " + refNumber);
+        /*if (refNumber == ""){
             System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference number: ZZZ ");
         }
         else{
             System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference number: " + refNumber);
-        }
+        }*/
     }
     
 }
