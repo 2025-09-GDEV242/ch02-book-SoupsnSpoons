@@ -84,7 +84,9 @@ class Book
     public void printDetails() //completing exercise 2.87...2.89
     {
        System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference number: " + refNumber);
-        /*if (refNumber == ""){
+       //what's happening when we run this is that it's not providing a value for the refNumber upon the code initially being run. Once you go to set the refNumber, then it will follow the directions provided in the setRefNumber section. 
+        
+       /*if (refNumber == ""){
             System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference number: ZZZ ");
         }
         else{
