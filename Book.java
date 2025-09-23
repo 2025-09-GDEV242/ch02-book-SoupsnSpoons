@@ -79,14 +79,14 @@ class Book
     }
     public void borrow()
     {
-        borrowed++;//something is wrong here...we think...
+        borrowed++;//something is wrong here...we think... HOWEVER, in theory, this should mean that the amount of books borrowed will go up by 1
     }
     /**
      * SO here's the tea, right? The code is working, but here's the problem:
      * when the code runs, regardless of what is put into the refNumber slot, it will print "Reference Number: null"
      * the if/else statement ONLY seems to come into play once you go to actually set the value for the reference number.
-     * if you go to set the value and leave it as a zero length string, it will print "ZZZ" as intended, or if you put in an actual value, it will print said value.
-     * I do not know if this is correct or not...
+     * if you go to set the value and leave it as a zero length string, it will print "ZZZ" as intended, or if you put in an actual value 
+     * it will print said value. I do not know if this is correct or not...
      * 
      * EDIT: so we went back and removed the refNumber from the parameters in the contructor, and added a length statement to the setter, and the issue is still there.
      * Let's try moving the conditional statement into the printDetails() section and see what happens... fingers crossed...
