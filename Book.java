@@ -14,19 +14,21 @@ class Book
     private String refNumber;
     private int pages;
     private int borrowed;
+    private boolean courseText;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
     //Adding in int bookPages in accordance with exercise 2.85 and String refNumber in accordance with exercise 2.88
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean courseText)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
         borrowed = 0;
+        this.courseText = courseText;
     }
 
     // Add the methods here ...
@@ -52,6 +54,10 @@ class Book
     public int borrowed()
     {
         return borrowed;
+    }
+    public boolean isCourseText()
+    {
+        return courseText;
     }
     /**
      * Adding printAuthor and printTitle (completing exercise 2.84...2.87...2.88)
