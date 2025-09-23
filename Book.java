@@ -13,6 +13,7 @@ class Book
     private String title;
     private String refNumber;
     private int pages;
+    private int borrowed;
 
     /**
      * Set the author and title fields when this object
@@ -25,6 +26,7 @@ class Book
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
+        borrowed = 0;
     }
 
     // Add the methods here ...
@@ -71,6 +73,12 @@ class Book
             refNumber = "The ref number is too short. Please input a value that is at least 3 characters long.";
         }
     }
+    public void borrow()
+    {
+        borrowed++;//something is wrong here...we think...
+    }
+    
+    
     /**
      * SO here's the tea, right? The code is working, but here's the problem:
      * when the code runs, regardless of what is put into the refNumber slot, it will print "Reference Number: null"
@@ -85,7 +93,7 @@ class Book
     {
        System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference number: " + refNumber);
        //what's happening when we run this is that it's not providing a value for the refNumber upon the code initially being run. Once you go to set the refNumber, then it will follow the directions provided in the setRefNumber section. 
-        
+    
        /*if (refNumber == ""){
             System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference number: ZZZ ");
         }
